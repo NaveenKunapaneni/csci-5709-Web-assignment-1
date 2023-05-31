@@ -25,7 +25,6 @@ import TravelCard from './components/cards';
 import PromoImage from './promo-3.jpeg';
 import PromoImag from './promoImage-2.jpeg'
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import { Paper, TextField, TableContainer, Table, TableRow, TableHead, TableCell } from "@mui/material";
 
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
