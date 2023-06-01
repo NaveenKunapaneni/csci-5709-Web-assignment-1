@@ -26,7 +26,6 @@ import PromoImage from './promo-3.jpeg';
 import PromoImag from './promoImage-2.jpeg'
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 
   const Search = styled('div')(({ theme }) => ({
