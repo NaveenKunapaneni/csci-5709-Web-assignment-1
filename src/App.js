@@ -25,6 +25,9 @@ import TravelCard from './components/cards';
 import PromoImage from './promo-3.jpeg';
 import PromoImag from './promoImage-2.jpeg'
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import ControlPointIcon from '@mui/icons-material/ControlPoint';
 
   const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -89,6 +92,10 @@ export default function PrimarySearchAppBar() {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+  const handleAddItems = () => {
+    window.location.reload()
+  }
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -270,8 +277,15 @@ export default function PrimarySearchAppBar() {
              alt={PromoImag}
              src={PromoImage} />
       </div>
-      <div className='Filter-option'> 
-        <FilterAltIcon />
+      <div className='middle-buttons'>
+      <Button className='Add-items'
+              variant="contained" 
+              startIcon={<ControlPointIcon />}
+              onClick={handleAddItems}
+              >
+        Add Items
+      </Button>
+        <FilterAltIcon className='Filter-button' />
       </div>
       <div className='cards-top-margin'>
         <TravelCard />

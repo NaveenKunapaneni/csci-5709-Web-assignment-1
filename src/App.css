@@ -31,14 +31,18 @@
   position: relative;
   overflow: hidden;
 }
-.Filter-option {
-  position: relative;
+.Add-items {
+  float: left;
   padding: 10px;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
+.Filter-button {
+  float: right;
+  padding: 10px;
+  margin-right: 20px;
+}
+
 
 .App-header {
   background-color: #282c34;

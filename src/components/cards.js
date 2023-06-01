@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState} from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,9 +7,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import barcelona from '../barcelona.jpeg';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Stack from '@mui/material/Stack';
+import './cards.css';
+
 
 function TravelCard() {
-  return (
+  const [ cardView, setCardView] = useState(true);
+
+const handleDeleteButton = () => {
+  (cardView ? setCardView(false) : setCardView(true))
+}
+
+const renderCardItems = () => {
+  
+  return(
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
@@ -26,11 +39,32 @@ function TravelCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Remove Item</Button>
-        <Button size="small">Book Now</Button>
+      <Stack direction="row" spacing={8}>
+      <Button className='Delete-Button' 
+              onClick={handleDeleteButton} 
+              variant="outlined" 
+              startIcon={<DeleteIcon />}
+              style = { {
+                  color : 'red'
+              }
+              }>
+        Delete
+      </Button>
+      <Button variant="contained">
+        Book Now
+      </Button>
+    </Stack>
       </CardActions>
     </Card>
   );
 }
+
+  return cardView ? renderCardItems() : null
+
+}
+
+
+
+
 
 export default TravelCard;
